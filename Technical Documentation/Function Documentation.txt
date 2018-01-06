@@ -1,0 +1,115 @@
+Functions:
+	readFile()
+	formatURL()
+	getDomainName()
+	scrapeLinks()
+	getPlugins()
+	getThemes()
+	getInstallationDir()
+	removeDuplicates()
+	printInfo()
+	
+readFile(): path<str> -> <list<str>>
+	Purpose:
+		Line by line, read a text file to get a list of websites
+	Parameters:
+		path is the path to the text file holding the list of websites
+	Output:
+		output is a list of websites (strs)
+	Notes:
+		N/A
+		
+formatURL(): url<str> -> <str>
+	Purpose:
+		Format the URLs from readFile so that it can be sent to scrapeLinks() and getDomainName()
+	Parameters:
+		url is a single str literal
+	Output:
+		output is a URL that begins with "http://", "https://", "http://www.", or "https://www." 
+	Notes:
+		N/A
+		
+getDomainName(): url<str> -> <str>
+	Purpose:
+		Pull the domain name from a URL str
+	Parameters:
+		url is the output from formatURL()
+	Output:
+		str containing the domain name
+	Notes:
+		N/A
+
+scrapeLinks(): url<str> -> <list<str>>
+	Purpose:
+		Pull links from a URL that match our regular expression
+	Parameters:
+		url is the output from formatURL()
+	Output:
+		list of links for a given website
+	Notes:
+		N/A
+
+getPlugins(): linkList<list<str>>, domainName<str> -> list<tuple>
+	Purpose:
+		Pull the plugin names and versions from a list of links
+	Parameters:
+		linkList is a list of links pulled from a given URL
+		domainName is the output of getDomainName()
+	Output:
+		output is a list of plugin names and their versions
+		output[n] is the nth plugin
+		output[n][0] is the plugin name
+		output[n][1] is the plugin version
+	Notes:
+		output[n][1] will be "N/A" if the plugin version could not be read
+		
+getThemes(): linkList<list<str>>, domainName<str> -> list<tuple>
+	Purpose:
+		Pull the theme names and versions from a list of links
+	Parameters:
+		linkList is a list of links pulled from a given URL
+		domainName is the output of getDomainName()
+	Output:
+		output is a list of theme names and their versions
+		output[n] is the nth theme
+		output[n][0] is the theme name
+		output[n][1] is the theme version
+	Notes:
+		output[n][1] will be "N/A" if the theme version could not be read
+		
+getInstallationDir(): linkList<list<str>> -> <str>
+	Purpose:
+		Get the name of the directory that WordPress is installed in
+	Parameters:
+		linkList is a list of links pulled from a given URL
+	Output:
+		output is the name of the installation directory
+	Notes:
+		output will be "N/A" if directory doesn't exist
+		
+removeDuplicates(): tupleList<list<tuple>> -> <list<tuple>>
+	Purpose:
+		Unique-ify outputs from getPlugins() and getThemes()
+	Parameters:
+		tupleList is the output from getPlugins() or getThemes()
+	Output:
+		Unique versions of the inputted tuple list
+	Notes:
+		N/A
+
+printInfo(): outputName<str>, websitePackages<list<tuple>> -> void
+	Purpose:
+		Write a txt file with all the information we've scraped
+	Parameters:
+		outputName is the name of the report that will be generated (txt file)
+		websitePackages is a list of tuples that have been populated by other functions
+		websitePackages[n] is the nth website
+		websitePackages[n][0] is the nth website name
+		websitePackages[n][1] is the nth website directory
+		websitePackages[n][2] is the nth website's plugin list
+		websitePackages[n][3] is the nth website's theme list
+	Output:
+		void
+	Notes:
+		A text file of name outputName.txt will be generated in the same directory as WP_Scraper.py
+	

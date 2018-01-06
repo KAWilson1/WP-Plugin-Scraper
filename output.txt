@@ -1,0 +1,63 @@
+Website: advancedfirerescue.com
+Dir: N/A
+Plugins:
+divi-builder -> N/A
+Themes:
+redwaves-lite -> N/A
+
+Website: artbytwymon.com
+Dir: wp
+Plugins:
+contact-form-7 -> 4.9.2
+photo-gallery -> 1.3.67
+photo-gallery -> 4.6.3
+photo-gallery -> 3.0.2
+photoswipe-masonry -> 4.9.1
+js_composer -> 5.4.2
+wp-booklet -> 4.9.1
+photo-gallery -> 0.4.1
+Themes:
+dt-the7 -> 6.0.1
+booklet -> 4.9.1
+
+Website: perryfd.com
+Dir: N/A
+Plugins:
+gallery-bank -> 4.9.1
+LayerSlider -> 5.6.2
+contact-form-7 -> 4.9.2
+document-gallery -> 4.4.3
+go_pricing -> 3.3.5
+recent-tweets-widget -> 1.0
+revslider -> 5.3.1.5
+js_composer -> 5.0.1
+LayerSlider -> 1.11.8
+js_composer -> 4.9.1
+Themes:
+dt-the7 -> 5.1.4
+
+Website: kylewilson.org
+Dir: wp
+Plugins:
+contact-form-7 -> 4.9.2
+siteorigin-panels -> 2.6.0
+Themes:
+TESSERACT -> 1.0.0
+TESSERACT -> 4.4.0
+TESSERACT -> 4.9.1
+
+Website: evansvillesown.com
+Dir: wp
+Plugins:
+contact-form-7 -> 4.9.2
+elementor -> 4.7.0
+recent-posts-widget-with-thumbnails -> 5.2.2
+elementor -> 1.8.11
+elementor-pro -> 1.11.0
+elementor -> 3.2.5
+elementor -> 4.0.2
+elementor -> 3.4.2
+Themes:
+kale -> 4.9.1
+kale -> 96449
+

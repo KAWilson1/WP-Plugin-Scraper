@@ -1,0 +1,6 @@
+What is WP_Scraper
+WP_Scraper is a small python script that generates a report that displays the domain name, wordpress installation directory (if it is not root), a list of plugins and their possible versions, and a list of themes and their possible versions. Note: The plugin versions and theme versions are not definite, it is up to the user to decide which plugin version is correct.
+
+Using WP_Scraper
+1. To begin using WP_Scraper, locate websites_to_scrape.txt or create it if it does not exist. Populate this text file with a list of domains that have WordPress installed in them, one website per line.
+2. Run WP_Scraper.py and output.txt will be generated with a report regarding the websites listed in websites_to_scrape.txt
